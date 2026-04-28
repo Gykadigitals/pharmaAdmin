@@ -13,7 +13,7 @@ export const dashboardApi = baseApi.injectEndpoints({
       query: (type) => ({
         url: '/admin/dashboard/export',
         method: 'GET',
-        responseHandler: async (response) => {
+        responseHandler: async (response: Response) => {
           const blob = await response.blob();
           const url = window.URL.createObjectURL(blob);
           const a = document.createElement('a');

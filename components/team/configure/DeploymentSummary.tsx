@@ -3,6 +3,7 @@ import {
   User as UserIcon, Camera, Mail, DollarSign,
   MapPin, Activity, TrendingUp, Clock, Users
 } from 'lucide-react';
+import { IMAGE_BASE_URL } from '@/constant/api';
 
 interface DeploymentSummaryProps {
   fullName: string;
@@ -15,7 +16,7 @@ interface DeploymentSummaryProps {
   totalLeave: number;
   profileImage: string | null;
   onImageClick: () => void;
-  fileInputRef: React.RefObject<HTMLInputElement>;
+  fileInputRef: React.RefObject<HTMLInputElement | null>;
   handleImageUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
   managerName: string;
 }
@@ -43,7 +44,7 @@ export function DeploymentSummary({
           className="w-32 h-32 rounded-[40px] bg-slate-50 flex items-center justify-center ring-4 ring-indigo-50 border-4 border-white shadow-xl transition-all group-hover:scale-105 overflow-hidden relative cursor-pointer"
         >
           {profileImage ? (
-            <img src={"http://localhost:5000" + profileImage} alt="Profile" className="w-full h-full object-cover transition-opacity duration-300" />
+            <img src={IMAGE_BASE_URL + profileImage} alt="Profile" className="w-full h-full object-cover transition-opacity duration-300" />
           ) : (
             <UserIcon size={52} className="text-slate-300" />
           )}

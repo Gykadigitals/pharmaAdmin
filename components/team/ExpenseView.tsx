@@ -65,6 +65,7 @@ import {
 } from '@/store/api/userApi';
 import { useLayout } from '@/context/LayoutContext';
 import { apiFetch } from '@/lib/api-client';
+import { API_BASE_URL } from '@/constant/api';
 
 const CATEGORY_CONFIG: Record<string, any> = {
   'ORG_TOTAL': { label: 'Total Organizational Spend', icon: TrendingUp, color: 'text-blue-600', bg: 'bg-blue-50' },
@@ -104,8 +105,7 @@ export default function ExpenseView() {
     setIsExporting(true);
     const start = dateRange.key === 'custom' ? commStart : dateRange.startDate;
     const end = dateRange.key === 'custom' ? commEnd : dateRange.endDate;
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
-    const url = `${baseUrl}/admin-reports/export-expenses?startDate=${start}&endDate=${end}`;
+    const url = `${API_BASE_URL}/admin-reports/export-expenses?startDate=${start}&endDate=${end}`;
     
     try {
       const response = await apiFetch(url);
@@ -134,9 +134,8 @@ export default function ExpenseView() {
     setIsExporting(true);
     const start = dateRange.key === 'custom' ? commStart : dateRange.startDate;
     const end = dateRange.key === 'custom' ? commEnd : dateRange.endDate;
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
     const targetId = selectedClaim.userId || selectedClaim._id;
-    const url = `${baseUrl}/admin-reports/export-user-expenses?userId=${targetId}&startDate=${start}&endDate=${end}`;
+    const url = `${API_BASE_URL}/admin-reports/export-user-expenses?userId=${targetId}&startDate=${start}&endDate=${end}`;
     
     try {
       const response = await apiFetch(url);

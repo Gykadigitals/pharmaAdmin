@@ -9,9 +9,12 @@ import {
   UserPlus
 } from 'lucide-react';
 import { colors } from '@/constant/colors';
+import { IMAGE_BASE_URL } from '@/constant/api';
 
 interface TopPerformersProps {
   data?: Array<{
+    id?: string;
+    employeeId?: string;
     name: string;
     sales: number;
     calls: number;

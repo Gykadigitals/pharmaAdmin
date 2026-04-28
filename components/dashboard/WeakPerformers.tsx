@@ -8,8 +8,12 @@ import {
   PhoneCall
 } from 'lucide-react';
 
+import { IMAGE_BASE_URL } from '@/constant/api';
+
 interface WeakPerformersProps {
   data?: Array<{
+    id?: string;
+    employeeId?: string;
     name: string;
     sales: number;
     calls: number;
@@ -46,7 +50,7 @@ const WeakPerformers: React.FC<WeakPerformersProps> = ({ data = [] }) => {
               <div className="relative">
                 <div className={`w-14 h-14 rounded-full border-2 border-white shadow-md flex items-center justify-center bg-slate-100 overflow-hidden`}>
                   {performer.avatar ? (
-                    <img src={"http://localhost:5000" + performer.avatar} alt={performer.name} className="w-full h-full object-cover" />
+                    <img src={IMAGE_BASE_URL + performer.avatar} alt={performer.name} className="w-full h-full object-cover" />
                   ) : (
                     <div className="w-full h-full bg-slate-200 flex items-center justify-center">
                       <span className="text-slate-400 font-black text-xs">{performer.name.charAt(0)}</span>

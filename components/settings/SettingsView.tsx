@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { colors } from '@/constant/colors';
+import { IMAGE_BASE_URL } from '@/constant/api';
 
 // --- Constants ---------------------------------------------------------------
 

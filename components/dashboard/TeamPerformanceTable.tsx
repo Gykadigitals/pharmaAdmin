@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { colors } from '@/constant/colors';
 import EmployeeDrawer, { DetailedEmployee } from '../team/EmployeeDrawer';
-import { EMPLOYEES } from '../analytics/EmployeeAnalyticsView';
 
 interface TeamPerformanceTableProps {
   data?: Array<{

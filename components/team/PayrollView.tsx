@@ -42,6 +42,7 @@ import {
 } from '@/store/api/userApi';
 import { useLayout } from '@/context/LayoutContext';
 import { apiFetch } from '@/lib/api-client';
+import { API_BASE_URL } from '@/constant/api';
 
 const formatINR = (val: number) => {
   return new Intl.NumberFormat('en-IN', {
@@ -73,8 +74,7 @@ export default function PayrollView() {
 
   const handleExport = async () => {
     setIsExporting(true);
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
-    const url = `${baseUrl}/admin-reports/export-payroll`;
+    const url = `${API_BASE_URL}/admin-reports/export-payroll`;
     
     try {
       const response = await apiFetch(url);
