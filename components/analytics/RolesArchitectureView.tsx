@@ -224,7 +224,7 @@ export default function RolesArchitectureView() {
           <div className="bg-slate-50/50 p-8 flex items-center justify-between border-t border-slate-100">
             <div className="flex gap-12">
               <div>
-                <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Active Infrastructure Nodes</p>
+                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Active Infrastructure Nodes</p>
                 <p className="text-xl font-black text-slate-900 tracking-tight mt-1">{dbRoles.length}</p>
               </div>
               <div className="w-px h-10 bg-slate-200" />
