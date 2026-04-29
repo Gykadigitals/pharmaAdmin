@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { 
-  ShieldCheck, 
-  Zap, 
-  Trash2, 
-  Plus, 
-  ChevronRight, 
-  UserPlus, 
+import {
+  ShieldCheck,
+  Zap,
+  Trash2,
+  Plus,
+  ChevronRight,
+  UserPlus,
   CheckCircle2,
   Lock,
   ChevronDown,
@@ -37,10 +37,10 @@ export default function RolesArchitectureView() {
       });
       if (!res.ok) throw new Error('Failed to fetch architecture data');
       const data = await res.json();
-      
+
       const rolesArray = data.roles || (Array.isArray(data) ? data : []);
       const allowed = data.allowedPermissions || [];
-      
+
       setDbRoles(rolesArray);
       setAllowedPermissions(allowed);
     } catch (err) {
@@ -82,7 +82,7 @@ export default function RolesArchitectureView() {
     }
   };
 
-  const filteredRoles = dbRoles.filter(r => 
+  const filteredRoles = dbRoles.filter(r =>
     r.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -93,8 +93,8 @@ export default function RolesArchitectureView() {
         <div className="flex items-end justify-between mb-16">
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <button 
-                onClick={() => router.back()} 
+              <button
+                onClick={() => router.back()}
                 className="w-14 h-14 bg-white border border-slate-100 text-slate-400 hover:text-indigo-600 rounded-[20px] flex items-center justify-center shadow-lg transition-all active:scale-95 shrink-0"
               >
                 <ChevronLeft size={24} />
@@ -112,7 +112,7 @@ export default function RolesArchitectureView() {
           <div className="flex items-center gap-6">
             <div className="relative group">
               <Search size={18} className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-indigo-600 transition-colors" />
-              <input 
+              <input
                 type="text"
                 placeholder="Search Infrastructure Roles..."
                 value={searchQuery}
@@ -198,13 +198,12 @@ export default function RolesArchitectureView() {
                               const hasPermission = role.permissions?.includes(perm.key);
                               return (
                                 <td key={role._id} className="p-8 border-b border-slate-50 border-l border-slate-50/50 text-center">
-                                  <div 
+                                  <div
                                     onClick={() => handleToggleRolePermission(role, perm.key)}
-                                    className={`w-10 h-10 rounded-xl mx-auto flex items-center justify-center transition-all ${
-                                      !isGlobalAllowed 
-                                        ? 'bg-slate-50 text-slate-200 cursor-not-allowed grayscale opacity-30' 
-                                        : 'cursor-pointer hover:scale-110 shadow-sm ' + (hasPermission ? 'bg-indigo-600 text-white shadow-indigo-200' : 'bg-slate-50 text-slate-300 hover:border-indigo-100 border border-transparent')
-                                    }`}
+                                    className={`w-10 h-10 rounded-xl mx-auto flex items-center justify-center transition-all ${!isGlobalAllowed
+                                      ? 'bg-slate-50 text-slate-200 cursor-not-allowed grayscale opacity-30'
+                                      : 'cursor-pointer hover:scale-110 shadow-sm ' + (hasPermission ? 'bg-indigo-600 text-white shadow-indigo-200' : 'bg-slate-50 text-slate-300 hover:border-indigo-100 border border-transparent')
+                                      }`}
                                   >
                                     {hasPermission ? <CheckCircle2 size={18} /> : <div className="w-2 h-2 rounded-full bg-current opacity-20" />}
                                   </div>
@@ -220,7 +219,7 @@ export default function RolesArchitectureView() {
               </tbody>
             </table>
           </div>
-          
+
           {/* Footer Metrics */}
           <div className="bg-slate-50/50 p-8 flex items-center justify-between border-t border-slate-100">
             <div className="flex gap-12">
@@ -230,14 +229,14 @@ export default function RolesArchitectureView() {
               </div>
               <div className="w-px h-10 bg-slate-200" />
               <div>
-                <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Global Access Plan</p>
+                <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest">Global Access Plan</p>
                 <p className="text-xl font-black text-indigo-600 tracking-tight mt-1 uppercase italic">Enterprise Std</p>
               </div>
             </div>
             <div className="flex gap-4">
-               <button onClick={fetchArchitectureData} className="p-3 bg-white border border-slate-200 rounded-xl text-slate-400 hover:text-indigo-600 hover:border-indigo-100 transition-all shadow-sm">
-                  <Activity size={18} />
-               </button>
+              <button onClick={fetchArchitectureData} className="p-3 bg-white border border-slate-200 rounded-xl text-slate-400 hover:text-indigo-600 hover:border-indigo-100 transition-all shadow-sm">
+                <Activity size={18} />
+              </button>
             </div>
           </div>
         </div>
