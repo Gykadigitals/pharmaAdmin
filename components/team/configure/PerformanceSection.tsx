@@ -60,7 +60,7 @@ export function PerformanceSection({
       <div className="bg-slate-50/50 rounded-[48px] p-6 md:p-12 border border-slate-100/50 animate-in fade-in zoom-in-95 duration-500">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {MONTHS_SHORT.map((month) => (
-            <div key={month} className="space-y-3 bg-white p-6 rounded-[32px] border border-amber-200 shadow-xl shadow-amber-500/[0.03] transition-all hover:border-amber-400 hover:shadow-amber-500/10 group">
+            <div key={month} className="space-y-3 bg-amber-50/50 hover:bg-amber-100/50 p-6 rounded-[32px] border border-amber-200 shadow-xl shadow-amber-500/[0.03] transition-all hover:-translate-y-1 hover:border-amber-400 hover:shadow-amber-500/10 group">
               <div className="flex items-center justify-between px-1">
                 <label className="text-[10px] font-black text-amber-600 uppercase tracking-widest leading-none">{month}</label>
                 <div className="w-2 h-2 rounded-full bg-amber-400 shadow-sm shadow-amber-500/20" />

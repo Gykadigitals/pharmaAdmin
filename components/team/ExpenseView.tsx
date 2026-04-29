@@ -68,9 +68,9 @@ import { apiFetch } from '@/lib/api-client';
 import { API_BASE_URL } from '@/constant/api';
 
 const CATEGORY_CONFIG: Record<string, any> = {
-  'ORG_TOTAL': { label: 'Total Organizational Spend', icon: TrendingUp, color: 'text-blue-600', bg: 'bg-blue-50' },
-  'OUTSTATION': { label: 'Outstation Expenditures', icon: Plane, color: 'text-purple-600', bg: 'bg-purple-50' },
-  'LOCAL': { label: 'Local / Base Expenditures', icon: Utensils, color: 'text-emerald-600', bg: 'bg-emerald-50' }
+  'ORG_TOTAL': { label: 'Total Organizational Spend', icon: TrendingUp, color: 'text-blue-600', bg: 'bg-blue-50', cardBg: 'bg-blue-50/50 hover:bg-blue-100/50' },
+  'OUTSTATION': { label: 'Outstation Expenditures', icon: Plane, color: 'text-purple-600', bg: 'bg-purple-50', cardBg: 'bg-purple-50/50 hover:bg-purple-100/50' },
+  'LOCAL': { label: 'Local / Base Expenditures', icon: Utensils, color: 'text-emerald-600', bg: 'bg-emerald-50', cardBg: 'bg-emerald-50/50 hover:bg-emerald-100/50' }
 };
 
 const formatINR = (val: number) => {
@@ -280,7 +280,7 @@ export default function ExpenseView() {
           {(overview?.data?.categories || []).map((c: any, i: number) => {
             const config = CATEGORY_CONFIG[c.label] || CATEGORY_CONFIG['ORG_TOTAL'];
             return (
-              <div key={i} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 sm:p-6 hover:shadow-md transition-all">
+              <div key={i} className={`${config.cardBg} rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 p-5 sm:p-6 transition-all duration-300 relative group`}>
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${config.bg}`}>
                     <config.icon size={20} className={config.color} />
@@ -297,7 +297,7 @@ export default function ExpenseView() {
         </div>
 
         {/* Recent Claim Requests */}
-        <div className="bg-white rounded-2xl border border-slate-100 shadow-sm">
+        <div className="bg-indigo-50/50 hover:bg-indigo-100/50 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between px-4 sm:px-8 py-5 border-b border-slate-50 gap-3">
             <h2 className="text-base font-black text-slate-900">Recent Claim Requests</h2>
           </div>

@@ -334,7 +334,7 @@ export default function EmployeeAnalyticsView() {
                   </ResponsiveContainer>
                 </div>
               </div>
-              <div className="bg-white rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center">
+              <div className="bg-blue-50/50 hover:bg-blue-100/50 rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300 group">
                 <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight mb-2">Target vs Achievement</h3>
                 <PerformanceGauge value={stats?.achievementPercentage || 0} />
                 <div className="mt-6 sm:mt-10 grid grid-cols-2 gap-3 sm:gap-4 w-full">
@@ -350,7 +350,7 @@ export default function EmployeeAnalyticsView() {
               </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-              <div className="bg-white rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-100 shadow-sm relative overflow-hidden group">
+              <div className="bg-emerald-50/50 hover:bg-emerald-100/50 rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-100 shadow-sm relative overflow-hidden group hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
                 {loadingDashStats && (
                   <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-10 flex items-center justify-center">
                     <div className="w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-full animate-spin" />
@@ -389,7 +389,7 @@ export default function EmployeeAnalyticsView() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-100 shadow-sm relative overflow-hidden group">
+              <div className="bg-amber-50/50 hover:bg-amber-100/50 rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-100 shadow-sm relative overflow-hidden group hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
                 {loadingDashStats && (
                   <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-10 flex items-center justify-center">
                     <div className="w-8 h-8 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin" />
@@ -419,7 +419,7 @@ export default function EmployeeAnalyticsView() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-100 shadow-sm relative overflow-hidden lg:col-span-2">
+              <div className="bg-indigo-50/50 hover:bg-indigo-100/50 rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-100 shadow-sm relative overflow-hidden lg:col-span-2 group hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
                 {loadingDashStats && (
                   <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-10 flex items-center justify-center">
                     <div className="w-8 h-8 border-4 border-rose-600 border-t-transparent rounded-full animate-spin" />
@@ -466,7 +466,7 @@ export default function EmployeeAnalyticsView() {
                 },
                 { label: 'Leaves Count', val: analytics?.totalLeaves || 0, icon: Calendar, color: 'text-rose-600', bg: 'bg-rose-50' }
               ].map((m, i) => (
-                <div key={i} className="bg-white p-6 rounded-[28px] border border-slate-100 shadow-sm flex items-center gap-4 group hover:shadow-xl transition-all duration-300">
+                <div key={i} className="bg-fuchsia-50/50 hover:bg-fuchsia-100/50 p-6 rounded-[28px] border border-slate-100 shadow-sm flex items-center gap-4 group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                   <div className={`w-12 h-12 rounded-2xl ${m.bg} ${m.color} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
                     <m.icon size={22} />
                   </div>
@@ -482,7 +482,7 @@ export default function EmployeeAnalyticsView() {
             </div>
 
             {/* ── Layer 2: Personnel Intelligence Registry (Full Width) ── */}
-            <div className="bg-white border border-slate-100 rounded-[48px] overflow-hidden shadow-sm">
+            <div className="bg-sky-50/50 hover:bg-sky-100/50 border border-slate-100 rounded-[48px] overflow-hidden shadow-sm group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="px-8 py-8 border-b border-slate-50 flex items-center justify-between bg-slate-50/20">
                 <div>
                   <h3 className="text-xl font-black text-slate-900 tracking-tight italic">Personnel Intelligence Report</h3>

@@ -33,7 +33,7 @@ const CompensationDonutChart: React.FC<CompensationDonutChartProps> = ({
   };
 
   return (
-    <div className="bg-white p-10 rounded-[32px] border border-slate-100 shadow-sm flex flex-col items-center h-full min-h-[480px]">
+    <div className="bg-purple-50/50 hover:bg-purple-100/50 p-10 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center h-full min-h-[480px] relative group">
       <div className="w-full flex items-center justify-between mb-8">
         <div>
           <h3 className="text-xl font-black text-slate-800 tracking-tight">Payroll Distribution</h3>

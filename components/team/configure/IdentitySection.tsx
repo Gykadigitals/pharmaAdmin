@@ -20,7 +20,7 @@ export function IdentitySection({ register, errors }: IdentitySectionProps) {
         </div>
       </div>
 
-      <div className="bg-white rounded-[48px] border border-slate-100 shadow-xl shadow-slate-200/50 p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+      <div className="bg-teal-50/50 hover:bg-teal-100/50 rounded-[48px] border border-slate-100 p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
         <div className="space-y-3 col-span-1">
           <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-2">Employee Full Name (As per Records)</label>
           <input

@@ -201,7 +201,7 @@ export default function EmployeeProfileView({ employeeId }: { employeeId: string
 
         {/* ── Profile Header ── */}
         <div className="px-3 sm:px-8  w-full">
-          <div className="bg-white rounded-3xl sm:rounded-[32px] border border-slate-100 shadow-sm p-4 sm:p-6 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-5 sm:gap-6">
+          <div className="bg-blue-50/50 hover:bg-blue-100/50 rounded-3xl sm:rounded-[32px] border border-slate-100 shadow-sm p-4 sm:p-6 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-5 sm:gap-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
             <div className="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-6 text-center sm:text-left">
               <div className="w-14 h-14 sm:w-18 sm:h-18 rounded-full flex items-center justify-center text-white text-lg sm:text-2xl font-black shadow-lg shrink-0" style={{ backgroundColor: emp.avatarBg }}>{emp.avatar}</div>
               <div className="min-w-0">
@@ -276,7 +276,7 @@ export default function EmployeeProfileView({ employeeId }: { employeeId: string
         </div>
 
         {/* ── Main Tabbed Content ── */}
-        <div className="bg-white rounded-3xl sm:rounded-[40px] border border-slate-100 shadow-sm overflow-hidden flex flex-col w-full">
+        <div className="bg-fuchsia-50/50 hover:bg-fuchsia-100/50 rounded-3xl sm:rounded-[40px] border border-slate-100 shadow-sm overflow-hidden flex flex-col w-full hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
           {/* Tab Header - Strict Local Scroll */}
           <div className="w-full overflow-x-auto border-b border-slate-100 no-scrollbar custom-scrollbar">
             <div className="flex items-center min-w-max px-4 sm:px-10">
@@ -299,7 +299,7 @@ export default function EmployeeProfileView({ employeeId }: { employeeId: string
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Left Column: Avatar & Basic Info */}
                   <div className="lg:col-span-1 space-y-6">
-                    <div className="bg-white rounded-[40px] p-8 border border-slate-100 shadow-sm flex flex-col items-center text-center">
+                    <div className="bg-amber-50/50 hover:bg-amber-100/50 rounded-[40px] p-8 border border-slate-100 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                       <div className="w-32 h-32 rounded-3xl bg-indigo-600 flex items-center justify-center text-white text-5xl font-black shadow-xl shadow-indigo-100 mb-6">
                         {u?.name?.charAt(0) || '?'}
                       </div>
@@ -330,7 +330,7 @@ export default function EmployeeProfileView({ employeeId }: { employeeId: string
                   {/* Right Column: Detailed Personal Info */}
                   <div className="lg:col-span-2 space-y-8">
                     {/* Identity Matrix */}
-                    <div className="bg-white rounded-[40px] p-10 border border-slate-100 shadow-sm">
+                    <div className="bg-rose-50/50 hover:bg-rose-100/50 rounded-[40px] p-10 border border-slate-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                       <div className="flex items-center justify-between mb-10">
                         <div>
                           <h3 className="text-xl font-black text-slate-900 tracking-tight">Identity Matrix</h3>
@@ -370,7 +370,7 @@ export default function EmployeeProfileView({ employeeId }: { employeeId: string
                     </div>
 
                     {/* Workplace Context */}
-                    <div className="bg-white rounded-[40px] p-10 border border-slate-100 shadow-sm">
+                    <div className="bg-emerald-50/50 hover:bg-emerald-100/50 rounded-[40px] p-10 border border-slate-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                       <h3 className="text-xl font-black text-slate-900 tracking-tight mb-8">Workplace Context</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         <div className="p-5 bg-slate-50 rounded-3xl border border-slate-100">

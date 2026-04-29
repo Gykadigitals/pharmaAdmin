@@ -398,7 +398,7 @@ export default function ConfigureMemberView() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-[40px] border border-slate-100 p-8 shadow-xl shadow-slate-200/30">
+                <div className="bg-amber-50/50 hover:bg-amber-100/50 rounded-[40px] border border-slate-100 p-8 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
                   <div className="flex items-center justify-between mb-8 px-2">
                     <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest">Permissions Layer</h3>
                     <div className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-[9px] font-black uppercase text-center">{selectedPermissions.length} Active</div>
@@ -428,7 +428,7 @@ export default function ConfigureMemberView() {
               </div>
 
               <div className="xl:col-span-8 space-y-8">
-                <div className="bg-white rounded-[40px] border border-slate-100 shadow-xl shadow-slate-200/20 p-8 lg:p-10">
+                <div className="bg-sky-50/50 hover:bg-sky-100/50 rounded-[40px] border border-slate-100 p-8 lg:p-10 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
                   <div className="flex items-center justify-between mb-10">
                     <h3 className="text-xs font-black text-slate-900 uppercase tracking-extra-widest">Global Roles Architecture</h3>
                     <RefreshCcw size={14} className={`text-slate-300 transition-all ${isLoadingRoles ? 'animate-spin' : 'cursor-pointer hover:text-indigo-600'}`} />
@@ -496,7 +496,7 @@ export default function ConfigureMemberView() {
               <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20 text-white"><BriefcaseIcon size={24} /></div>
               <h2 className="text-xl font-black text-slate-900 tracking-tight uppercase tracking-widest">Regional Deployment & Territories</h2>
             </div>
-            <div className="bg-white rounded-[40px] border border-slate-100 shadow-xl shadow-slate-200/50 p-10 space-y-12">
+            <div className="bg-fuchsia-50/50 hover:bg-fuchsia-100/50 rounded-[40px] border border-slate-100 p-10 space-y-12 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TagInput
                   label="Assigned Deployment Stations" tags={stations}

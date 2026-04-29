@@ -117,9 +117,9 @@ export default function PayrollView() {
   // Map backend labels to icons/colors
   const getCategoryConfig = (label: string, fallbackName?: string) => {
     const configs: Record<string, any> = {
-      'ORG_TOTAL': { label: 'Total Net Payout', icon: TrendingUp, color: 'text-blue-600', bg: 'bg-blue-50' },
-      'BASIC': { label: fallbackName || 'Basic Salary', icon: Landmark, color: 'text-purple-600', bg: 'bg-purple-50' },
-      'ALLOWANCE': { label: fallbackName || 'Total Allowances', icon: Utensils, color: 'text-emerald-600', bg: 'bg-emerald-50' }
+      'ORG_TOTAL': { label: 'Total Net Payout', icon: TrendingUp, color: 'text-blue-600', bg: 'bg-blue-50', cardBg: 'bg-blue-50/50 hover:bg-blue-100/50' },
+      'BASIC': { label: fallbackName || 'Basic Salary', icon: Landmark, color: 'text-purple-600', bg: 'bg-purple-50', cardBg: 'bg-purple-50/50 hover:bg-purple-100/50' },
+      'ALLOWANCE': { label: fallbackName || 'Total Allowances', icon: Utensils, color: 'text-emerald-600', bg: 'bg-emerald-50', cardBg: 'bg-emerald-50/50 hover:bg-emerald-100/50' }
     };
     return configs[label] || configs['ORG_TOTAL'];
   };
@@ -185,7 +185,7 @@ export default function PayrollView() {
           {(overview?.data?.categories || []).map((c: any, i: number) => {
             const config = getCategoryConfig(c.label, c.name);
             return (
-              <div key={i} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 sm:p-6 hover:shadow-md transition-all">
+              <div key={i} className={`${config.cardBg} rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 p-5 sm:p-6 transition-all duration-300 relative group`}>
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${config.bg}`}>
                     <config.icon size={20} className={config.color} />
@@ -202,7 +202,7 @@ export default function PayrollView() {
         </div>
 
         {/* Payroll Employee Rolls */}
-        <div className="bg-white rounded-2xl border border-slate-100 shadow-sm">
+        <div className="bg-indigo-50/50 hover:bg-indigo-100/50 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
           <div className="px-4 sm:px-8 py-5 border-b border-slate-50">
             <h2 className="text-base font-black text-slate-900">Active Payroll Rolls</h2>
           </div>

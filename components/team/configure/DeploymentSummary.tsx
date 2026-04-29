@@ -82,14 +82,14 @@ export function DeploymentSummary({
               { label: 'Monthly Comp', value: `₹${activeTotalComp.toLocaleString()}`, icon: TrendingUp },
               { label: 'Leave Balance', value: `${totalLeave} Days`, icon: Clock },
             ].map((stat, i) => (
-              <div key={i} className="bg-slate-50/50 border border-slate-50 rounded-2xl p-4 transition-all hover:bg-white hover:border-indigo-100 hover:shadow-md">
+              <div key={i} className="bg-blue-100/50 hover:bg-blue-200/50 border border-white/50 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 group">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center text-indigo-600 shadow-indigo-50/50">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100/80 shadow-sm flex items-center justify-center text-blue-600 group-hover:bg-white group-hover:scale-110 transition-all duration-300">
                     <stat.icon size={14} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[9px] font-black text-slate-400 uppercase tracking-tight">{stat.label}</p>
-                    <p className="text-[11px] font-bold text-slate-800 truncate">{stat.value}</p>
+                    <p className="text-[9px] font-black text-slate-500 uppercase tracking-tight">{stat.label}</p>
+                    <p className="text-[11px] font-bold text-slate-900 truncate">{stat.value}</p>
                   </div>
                 </div>
               </div>

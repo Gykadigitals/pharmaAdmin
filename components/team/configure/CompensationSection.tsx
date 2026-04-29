@@ -81,7 +81,7 @@ export function CompensationSection({
 
       <div className="space-y-6">
         {salaryRevisions.map((rev) => (
-          <div key={rev.id} className={`bg-white rounded-[40px] border transition-all duration-500 overflow-hidden ${expandedRevision === rev.id ? 'border-emerald-200 shadow-2xl shadow-emerald-500/5 ring-8 ring-emerald-500/[0.02]' : 'border-slate-100 opacity-60 hover:opacity-100 hover:border-slate-200'}`}>
+          <div key={rev.id} className={`bg-emerald-50/50 hover:bg-emerald-100/50 rounded-[40px] border transition-all duration-500 overflow-hidden ${expandedRevision === rev.id ? 'border-emerald-200 shadow-2xl shadow-emerald-500/5 ring-8 ring-emerald-500/[0.02]' : 'border-slate-100 opacity-60 hover:opacity-100 hover:border-slate-200 hover:-translate-y-1'}`}>
             <div
               onClick={() => setExpandedRevision(rev.id)}
               className="px-6 md:px-10 py-6 md:py-8 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer group gap-6 sm:gap-0"

@@ -147,7 +147,7 @@ const HierarchyView = () => {
 
       {/* 🛠️ Modern Navigation Rails (Controls) */}
       <div className="absolute bottom-10 right-10 flex flex-col gap-4 z-50">
-        <div className="bg-white border border-slate-100 rounded-[36px] p-2 flex flex-col gap-2 shadow-2xl">
+        <div className="bg-rose-50/50 hover:bg-rose-100/50 border border-slate-100 rounded-[36px] p-2 flex flex-col gap-2 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300">
           <button onClick={() => setZoom(z => Math.min(z + 0.1, 2.5))} className="p-4 hover:bg-slate-50 text-slate-400 hover:text-indigo-600 rounded-full transition-all">
             <ZoomIn size={22} />
           </button>

@@ -31,7 +31,7 @@ const WeakPerformers: React.FC<WeakPerformersProps> = ({ data = [] }) => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm flex-1">
+    <div className="bg-rose-50/50 hover:bg-rose-100/50 p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 flex-1 relative group">
       <div className="flex items-center justify-between mb-10">
         <h3 className="text-lg font-black text-slate-800">Needs Attention</h3>
         <div className="w-8 h-8 rounded-full bg-rose-50 flex items-center justify-center text-rose-600">

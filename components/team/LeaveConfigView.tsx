@@ -293,7 +293,7 @@ export default function LeaveConfigView() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
               {/* Sick Leave Quota */}
-              <div className="bg-white border border-slate-100 rounded-[48px] p-12 transition-all hover:shadow-2xl hover:shadow-slate-200/30 group relative">
+              <div className="bg-blue-50/50 hover:bg-blue-100/50 border border-slate-100 rounded-[48px] p-12 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 group relative">
                 <div className="absolute top-0 right-0 w-4 h-full bg-rose-500 rounded-r-[48px] opacity-10 group-hover:opacity-100 transition-opacity" />
                 <div className="flex items-center gap-5 mb-10">
                   <div className="w-14 h-14 bg-rose-50 rounded-[24px] flex items-center justify-center text-rose-500 group-hover:bg-rose-500 group-hover:text-white transition-all duration-500">
@@ -333,7 +333,7 @@ export default function LeaveConfigView() {
               </div>
 
               {/* Casual Leave Quota */}
-              <div className="bg-white border border-slate-100 rounded-[48px] p-12 transition-all hover:shadow-2xl hover:shadow-slate-200/30 group relative">
+              <div className="bg-emerald-50/50 hover:bg-emerald-100/50 border border-slate-100 rounded-[48px] p-12 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 group relative">
                 <div className="absolute top-0 right-0 w-4 h-full bg-amber-500 rounded-r-[48px] opacity-10 group-hover:opacity-100 transition-opacity" />
                 <div className="flex items-center gap-5 mb-10">
                   <div className="w-14 h-14 bg-amber-50 rounded-[24px] flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all duration-500">
@@ -373,7 +373,7 @@ export default function LeaveConfigView() {
               </div>
 
               {/* Earned Leave Quota */}
-              <div className="bg-white border border-slate-100 rounded-[48px] p-12 transition-all hover:shadow-2xl hover:shadow-slate-200/30 group relative">
+              <div className="bg-amber-50/50 hover:bg-amber-100/50 border border-slate-100 rounded-[48px] p-12 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 group relative">
                 <div className="absolute top-0 right-0 w-4 h-full bg-indigo-500 rounded-r-[48px] opacity-10 group-hover:opacity-100 transition-opacity" />
                 <div className="flex items-center gap-5 mb-10">
                   <div className="w-14 h-14 bg-indigo-50 rounded-[24px] flex items-center justify-center text-indigo-500 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500">
@@ -527,7 +527,7 @@ export default function LeaveConfigView() {
               </div>
             )}
 
-            <div className="bg-white border border-slate-100 rounded-[56px] overflow-hidden shadow-sm transition-all hover:shadow-2xl hover:shadow-slate-200/20">
+            <div className="bg-indigo-50/50 hover:bg-indigo-100/50 border border-slate-100 rounded-[56px] overflow-hidden shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60">
               <table className="w-full text-left">
                 <thead>
                   <tr className="bg-slate-50/80 border-b border-slate-50">

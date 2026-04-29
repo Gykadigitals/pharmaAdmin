@@ -23,7 +23,7 @@ const SalesVsTarget: React.FC<SalesVsTargetProps> = ({
   };
 
   return (
-    <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm flex-1">
+    <div className="bg-emerald-50/50 hover:bg-emerald-100/50 p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 flex-1 relative group">
       <div className="flex items-center justify-between mb-8">
         <h3 className="text-lg font-black text-slate-800">Sales vs Target</h3>
         <span className="text-[10px] font-black p-2 bg-emerald-50 text-emerald-600 rounded-lg uppercase tracking-widest">

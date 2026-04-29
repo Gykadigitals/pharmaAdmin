@@ -22,7 +22,7 @@ const ActivityMetrics: React.FC<ActivityMetricsProps> = ({ data = [] }) => {
   ];
 
   return (
-    <div className="bg-white p-10 rounded-[32px] border border-slate-100 shadow-sm flex flex-col flex-1 h-full">
+    <div className="bg-sky-50/50 hover:bg-sky-100/50 p-10 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 flex flex-col flex-1 h-full relative group">
       <h3 className="text-xl font-black text-slate-800 mb-10">Employee Activity Metrics</h3>
 
       <div className="space-y-6 flex-1 flex flex-col justify-start">

@@ -45,7 +45,7 @@ const TeamPerformanceTable: React.FC<TeamPerformanceTableProps> = ({ data = [] }
   };
 
   return (
-    <div className="bg-white p-4 sm:p-8 rounded-[24px] sm:rounded-[32px] border border-slate-100 shadow-sm overflow-hidden min-h-[400px]">
+    <div className="bg-fuchsia-50/50 hover:bg-fuchsia-100/50 p-4 sm:p-8 rounded-[24px] sm:rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 overflow-hidden min-h-[400px] group relative">
       <div className="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
         <h3 className="text-lg sm:text-xl font-black text-slate-800">Team Performance Analysis</h3>
         <div className="flex items-center gap-3 w-full sm:w-auto">

@@ -26,7 +26,7 @@ const ExpensesDonutChart: React.FC<ExpensesDonutChartProps> = ({ data = [], tota
   const isEmpty = data.length === 0;
 
   return (
-    <div className="bg-white p-10 rounded-[32px] border border-slate-100 shadow-sm flex flex-col items-center h-full min-h-[480px]">
+    <div className="bg-amber-50/50 hover:bg-amber-100/50 p-10 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center h-full min-h-[480px] relative group">
       <h3 className="text-xl font-black text-slate-800 self-start mb-6 text-center w-full">Expenses Distribution</h3>
 
       <div className="relative w-full h-64 flex items-center justify-center">

@@ -127,7 +127,7 @@ export default function RolesArchitectureView() {
         </div>
 
         {/* ── 🛡️ THE ACCESS MATRIX ── */}
-        <div className="bg-white rounded-[48px] border border-slate-100 shadow-2xl shadow-slate-200/50 overflow-hidden relative mb-24">
+        <div className="bg-teal-50/50 hover:bg-teal-100/50 rounded-[48px] border border-slate-100 shadow-2xl shadow-slate-200/50 overflow-hidden relative mb-24 group hover:-translate-y-1 hover:shadow-slate-300/60 transition-all duration-300">
           <div className="overflow-x-auto custom-scrollbar">
             <table className="w-full border-collapse">
               <thead>

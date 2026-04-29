@@ -90,15 +90,15 @@ const DashboardView = () => {
 
   const rows = [
     [
-      { label: 'TOTAL EMPLOYEES', value: stats ? formatNumber(stats.totalEmployees) : '...', change: '+0%', isPositive: true, icon: Users, href: '/analytics?tab=reports' },
-      { label: 'TOTAL CALLS', value: stats ? formatNumber(stats.totalCalls) : '...', change: 'In Range', isPositive: true, icon: PhoneCall },
-      { label: 'CLIENTS ADDED', value: stats ? formatNumber(stats.clientsAdded) : '...', change: 'In Range', isPositive: true, icon: UserPlus },
+      { label: 'TOTAL EMPLOYEES', value: stats ? formatNumber(stats.totalEmployees) : '...', change: '+0%', isPositive: true, icon: Users, href: '/analytics?tab=reports', colorTheme: 'blue' as const },
+      { label: 'TOTAL CALLS', value: stats ? formatNumber(stats.totalCalls) : '...', change: 'In Range', isPositive: true, icon: PhoneCall, colorTheme: 'emerald' as const },
+      { label: 'CLIENTS ADDED', value: stats ? formatNumber(stats.clientsAdded) : '...', change: 'In Range', isPositive: true, icon: UserPlus, colorTheme: 'amber' as const },
     ],
     [
-      { label: 'SALES ACHIEVED', value: stats ? formatCurrency(stats.monthlyAchievement) : '...', change: 'Month-wise', isPositive: true, icon: CircleDollarSign },
-      { label: 'TARGET ASSIGNED', value: stats ? formatCurrency(stats.monthlyTarget) : '...', change: 'Monthly', isPositive: true, icon: Target },
-      { label: 'ACHIEVEMENT %', value: stats ? `${(stats.achievementPercentage || 0).toFixed(1)}%` : '...', change: 'Month-wise', isPositive: true, icon: PieChart },
-      { label: 'EXPENSES CLAIMED', value: stats ? formatCurrency(stats.monthlyExpense) : '...', change: 'Month-wise', isPositive: true, icon: FileText },
+      { label: 'SALES ACHIEVED', value: stats ? formatCurrency(stats.monthlyAchievement) : '...', change: 'Month-wise', isPositive: true, icon: CircleDollarSign, colorTheme: 'indigo' as const },
+      { label: 'TARGET ASSIGNED', value: stats ? formatCurrency(stats.monthlyTarget) : '...', change: 'Monthly', isPositive: true, icon: Target, colorTheme: 'rose' as const },
+      { label: 'ACHIEVEMENT %', value: stats ? `${(stats.achievementPercentage || 0).toFixed(1)}%` : '...', change: 'Month-wise', isPositive: true, icon: PieChart, colorTheme: 'cyan' as const },
+      { label: 'EXPENSES CLAIMED', value: stats ? formatCurrency(stats.monthlyExpense) : '...', change: 'Month-wise', isPositive: true, icon: FileText, colorTheme: 'purple' as const },
     ]
   ];
 

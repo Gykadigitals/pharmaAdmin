@@ -65,7 +65,7 @@ const OrgStrengthRadar: React.FC<OrgStrengthRadarProps> = ({ stats }) => {
   }, [data]);
 
   return (
-    <div className="bg-white p-10 rounded-[48px] border border-slate-100 shadow-sm flex flex-col items-center h-full relative overflow-hidden group">
+    <div className="bg-orange-50/50 hover:bg-orange-100/50 p-10 rounded-[48px] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center h-full relative overflow-hidden group">
       <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity">
         <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 animate-pulse">
             <Activity size={24} />

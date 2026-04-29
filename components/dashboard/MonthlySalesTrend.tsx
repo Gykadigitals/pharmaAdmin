@@ -15,7 +15,7 @@ const MonthlySalesTrend: React.FC<MonthlySalesTrendProps> = ({ data = [] }) => {
   const maxSales = Math.max(...data.map(d => d.sales), 1);
 
   return (
-    <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm flex-1">
+    <div className="bg-blue-50/50 hover:bg-blue-100/50 p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 flex-1 relative group">
       <div className="flex items-center justify-between mb-10">
         <h3 className="text-lg font-black text-slate-800">Monthly Sales Trend</h3>
         <button className="text-slate-400 hover:text-slate-600">
