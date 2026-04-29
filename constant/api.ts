@@ -1,4 +1,4 @@
-export const SERVER_URL = process.env.NEXT_PUBLIC_API_URL || 'https://3f9f-2409-40f0-11d1-ad16-2c93-26ed-319a-a530.ngrok-free.app';
+export const SERVER_URL = process.env.NEXT_PUBLIC_API_URL || 'https://3f9f-2409-40f0-11d1-ad16-2c93-26ed-319a-a530.ngrok-free.app/';
 export const API_BASE_URL = `${SERVER_URL}/api`;
 export const IMAGE_BASE_URL = SERVER_URL;
 
